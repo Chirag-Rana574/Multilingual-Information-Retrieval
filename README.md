@@ -67,15 +67,15 @@ All queries and documents are aligned in a **shared English semantic embedding s
 
 ## 🏗️ System Architecture
 
-```mermaid
-flowchart TD
-    A["User Query (Any Indic Language)"] --> B["IndicTrans2: Indic to English"]
-    B --> C["Transformer Encoder (Semantic Embedding)"]
-    C --> D["HNSW Vector Search"]
-    D --> E["Top Retrieval Results"]
-    E --> F["IndicTrans2: English to Indic"]
-    F --> G["Final Output (Titles, Summaries, Scores)"]
- ```
+Below are a simple and a more detailed flowcharts, describing the project. 
+### **Simplified Flow**
+<img width="1600" height="556" alt="image" src="https://github.com/user-attachments/assets/fb294896-aa8d-4483-b6d3-8f12ffa78da5" />
+
+### **High-Level System Workflow**
+<img width="1280" height="1179" alt="image" src="https://github.com/user-attachments/assets/f472d23d-488f-4d3f-8f13-fa88a4836de1" />
+
+---
+
 ## 📚 Dataset
 
 ### 📘 **LeSICiN (Primary Corpus)**
