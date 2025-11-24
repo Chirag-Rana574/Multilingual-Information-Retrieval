@@ -1,80 +1,81 @@
-# 🎯 Democratizing Legal Information in India through Multilingual Semantic Retrieval  
+# 🎯 Democratizing Legal Information in India through Multilingual Semantic Retrieval
 *A cross-lingual, transformer-powered legal search engine for 22 Indian languages.*
 
 ---
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)  
-![Transformers](https://img.shields.io/badge/NLP-Transformers-purple)  
-![IndicTrans2](https://img.shields.io/badge/Model-IndicTrans2-orange)  
-![HNSW](https://img.shields.io/badge/Vector%20Search-HNSW-green)  
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Transformers](https://img.shields.io/badge/NLP-Transformers-purple)
+![IndicTrans2](https://img.shields.io/badge/Model-IndicTrans2-orange)
+![HNSW](https://img.shields.io/badge/Vector%20Search-HNSW-green)
 ![MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
 ## 📑 Table of Contents
 
-- [Overview](#overview)  
-- [Motivation](#motivation)  
-- [Core Idea](#core-idea)  
-- [System Architecture](#system-architecture)  
-- [Dataset](#dataset)  
-- [Results](#results)  
-- [Technologies Used](#technologies-used)  
-- [Future Scope](#future-scope)  
-- [Citation](#citation)  
+- [Overview](#overview)
+- [Motivation](#motivation)
+- [Core Idea](#core-idea)
+- [System Architecture](#system-architecture)
+- [Dataset](#dataset)
+- [Results](#results)
+- [Technologies Used](#technologies-used)
+- [Future Scope](#future-scope)
+- [Citation](#citation)
 - [Contact](#contact)
 
 ---
 
-## 🚀 Overview  
-India is home to 1.4B people speaking hundreds of languages, yet English dominates court judgments.  
+## 🚀 Overview
+India is home to 1.4B people speaking hundreds of languages, yet English dominates court judgments.
 This project enables:
 
-- Queries in **22 Indian languages**  
-- **Semantic** (not keyword) retrieval  
-- Translated, readable case summaries  
-- Accurate embeddings + high-speed vector search  
+- Queries in **22 Indian languages**
+- **Semantic** (not keyword) retrieval
+- Translated, readable case summaries
+- Accurate embeddings + high-speed vector search
 
 A step toward **justice accessibility and linguistic equality**.
 
 ---
 
-## 🌍 Motivation  
-Only **6–10% of Indians** speak English, yet legal information is almost entirely in English.  
+## 🌍 Motivation
+Only **6–10% of Indians** speak English, yet legal information is almost entirely in English.
 This creates:
 
-- Linguistic inequality  
-- Barriers for rural users  
-- Lack of access to case laws  
+- Linguistic inequality
+- Barriers for rural users
+- Lack of access to case laws
 
 Our system returns legal case information **in the user’s native language**, making justice more accessible.
 
 ---
 
-## 🧠 Core Idea  
+## 🧠 Core Idea
 All queries and documents are aligned in a **shared English semantic embedding space**.
 
 **Workflow:**
 
-1. User inputs a query in any Indian language  
-2. Translate query → English using **IndicTrans2**  
-3. Generate semantic embedding via Transformer  
-4. Use **HNSWlib** to perform vector similarity search  
-5. Retrieve top legal cases  
-6. Translate case titles & summaries back → user’s language  
+1. User inputs a query in any Indian language
+2. Translate query → English using **IndicTrans2**
+3. Generate semantic embedding via Transformer
+4. Use **HNSWlib** to perform vector similarity search
+5. Retrieve top legal cases
+6. Translate case titles & summaries back → user’s language
 
 ---
 
-## 🏗️ System Architecture  
+## 🏗️ System Architecture
 
 ```mermaid
 flowchart TD
-    A[User Query (Any Indic Language)] --> B[IndicTrans2<br>Indic → English]
-    B --> C[Transformer Encoder<br>Semantic Embedding]
-    C --> D[HNSW Vector Search]
-    D --> E[Top Retrieval Results]
-    E --> F[IndicTrans2<br>English → Indic]
-    F --> G[Final Output (Titles + Summaries + Scores)]
+    A["User Query (Any Indic Language)"] --> B["IndicTrans2: Indic to English"]
+    B --> C["Transformer Encoder (Semantic Embedding)"]
+    C --> D["HNSW Vector Search"]
+    D --> E["Top Retrieval Results"]
+    E --> F["IndicTrans2: English to Indic"]
+    F --> G["Final Output (Titles, Summaries, Scores)"]
+ ```
 ## 📚 Dataset
 
 ### 📘 **LeSICiN (Primary Corpus)**
@@ -126,7 +127,7 @@ flowchart TD
 
 ## 📄 Citation
 
-Bangwal, A., Gusain, A., Rana, C., Sharma, N., & Kumar, R.
+Bangwal, A., Gusain, A., Rana, C., Sharma, N., & Kumar, R.  
 "Democratizing Legal Information in India through Multilingual Semantic Retrieval," 2025.
 
 ---
