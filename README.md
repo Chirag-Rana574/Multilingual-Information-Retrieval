@@ -86,7 +86,7 @@ flowchart TD
 ### 📝 **Evaluation Dataset**
 - **100 multilingual queries**  
 - Queries in **22 Indian languages**  
-- Each query manually annotated with **3 relevant legal cases**
+- Each query manually annotated with **10 relevant legal cases**
 
 ---
 
