@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #0b0b0b;
+  --accent-contrast: #ffffff;
+  --accent-soft: #1f1f1f;
+  --text: #0b0b0b;
+  --muted: #505050;
+  --border: rgba(0, 0, 0, 0.08);
+  --card: rgba(255, 255, 255, 0.96);
+  --panel: rgba(250, 250, 250, 0.92);
+  --panel-strong: rgba(240, 240, 240, 0.95);
+  --page-bg: radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.05), transparent 24%), radial-gradient(circle at 80% 0%, rgba(0, 0, 0, 0.04), transparent 28%), #ffffff;
+  --shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  --ring: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --accent: #f5f5f5;
+  --accent-contrast: #0b0b0b;
+  --accent-soft: #d9d9d9;
+  --text: #f5f5f5;
+  --muted: #b3b3b3;
+  --border: rgba(255, 255, 255, 0.12);
+  --card: rgba(15, 15, 15, 0.96);
+  --panel: rgba(19, 19, 19, 0.94);
+  --panel-strong: rgba(26, 26, 26, 0.95);
+  --page-bg: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.06), transparent 24%), radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.05), transparent 28%), #050505;
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  --ring: 0 0 0 3px rgba(255, 255, 255, 0.18);
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: "Space Grotesk", "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(47, 103, 255, 0.2);
+  color: var(--text);
+}
+[data-theme="dark"] ::selection {
+  background: rgba(124, 209, 255, 0.25);
+  color: var(--text);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+  border-radius: 999px;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: rgba(233, 238, 247, 0.18);
+}
+
+@keyframes stepPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.animate-step-ongoing {
+  animation: stepPulse 1s ease-in-out infinite;
+}
